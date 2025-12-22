@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>CalendarWidgetExtension.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>isShown</key>
+			<true/>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>Todo.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>isShown</key>
+			<true/>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>9A6558772E78429100FC4140</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9A6558852E78429200FC4140</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9A65588F2E78429200FC4140</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9A795AEF2E80507800D37CBD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9A795B1C2E805E7900D37CBD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
