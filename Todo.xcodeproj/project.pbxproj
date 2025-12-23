@@ -38,6 +38,14 @@
 		9A6558E12E787B6000FC4140 /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6558E02E787B5200FC4140 /* DateFormatter+Extensions.swift */; };
 		9A6558E22E787B6000FC4140 /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6558E02E787B5200FC4140 /* DateFormatter+Extensions.swift */; };
 		9A6558E32E787B6000FC4140 /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6558E02E787B5200FC4140 /* DateFormatter+Extensions.swift */; };
+		9A66AD112EFA6C9500110202 /* CategoryManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A66AD102EFA6C9500110202 /* CategoryManagementView.swift */; };
+		9A66AD122EFA6C9500110202 /* CategoryManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A66AD102EFA6C9500110202 /* CategoryManagementView.swift */; };
+		9A66AD132EFA6C9500110202 /* CategoryManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A66AD102EFA6C9500110202 /* CategoryManagementView.swift */; };
+		9A66AD142EFA6C9500110202 /* CategoryManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A66AD102EFA6C9500110202 /* CategoryManagementView.swift */; };
+		9A66AD162EFA6FCF00110202 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A66AD152EFA6FCF00110202 /* SettingsView.swift */; };
+		9A66AD172EFA6FCF00110202 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A66AD152EFA6FCF00110202 /* SettingsView.swift */; };
+		9A66AD182EFA6FCF00110202 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A66AD152EFA6FCF00110202 /* SettingsView.swift */; };
+		9A66AD192EFA6FCF00110202 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A66AD152EFA6FCF00110202 /* SettingsView.swift */; };
 		9A795B1E2E805E7900D37CBD /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A795AF22E80507800D37CBD /* WidgetKit.framework */; };
 		9A795B1F2E805E7900D37CBD /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A795AF42E80507800D37CBD /* SwiftUI.framework */; };
 		9A795B2E2E805E7A00D37CBD /* CalendarWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9A795B1D2E805E7900D37CBD /* CalendarWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -119,6 +127,8 @@
 		9A6558D72E78595700FC4140 /* DailyTaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTaskListView.swift; sourceTree = "<group>"; };
 		9A6558DC2E78755400FC4140 /* Calendar+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar+Extensions.swift"; sourceTree = "<group>"; };
 		9A6558E02E787B5200FC4140 /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
+		9A66AD102EFA6C9500110202 /* CategoryManagementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryManagementView.swift; sourceTree = "<group>"; };
+		9A66AD152EFA6FCF00110202 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		9A795AF22E80507800D37CBD /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		9A795AF42E80507800D37CBD /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		9A795B1D2E805E7900D37CBD /* CalendarWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CalendarWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -247,6 +257,8 @@
 		9A6558AD2E78438C00FC4140 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9A66AD152EFA6FCF00110202 /* SettingsView.swift */,
+				9A66AD102EFA6C9500110202 /* CategoryManagementView.swift */,
 				9AB7073B2E788413000D8B60 /* EditCategoryView.swift */,
 				9A6558AE2E78439200FC4140 /* MainTabView.swift */,
 				9A6558B32E7843DB00FC4140 /* TaskList */,
@@ -467,6 +479,8 @@
 				9A795B482E80653D00D37CBD /* WeekView.swift in Sources */,
 				9A6558BC2E7845B200FC4140 /* TaskRowView.swift in Sources */,
 				9A6558C22E7845C600FC4140 /* CalendarView.swift in Sources */,
+				9A66AD162EFA6FCF00110202 /* SettingsView.swift in Sources */,
+				9A66AD142EFA6C9500110202 /* CategoryManagementView.swift in Sources */,
 				9A6558B92E7845A400FC4140 /* MainTabView.swift in Sources */,
 				9A6558DF2E78755C00FC4140 /* Calendar+Extensions.swift in Sources */,
 				9A6558C82E7845D000FC4140 /* Task.swift in Sources */,
@@ -493,9 +507,11 @@
 				9A6558C02E7845B700FC4140 /* TaskListView.swift in Sources */,
 				9A6558BD2E7845B200FC4140 /* TaskRowView.swift in Sources */,
 				9A6558DE2E78755C00FC4140 /* Calendar+Extensions.swift in Sources */,
+				9A66AD172EFA6FCF00110202 /* SettingsView.swift in Sources */,
 				9A795B432E8061CA00D37CBD /* WidgetCalendarView.swift in Sources */,
 				9A6558BA2E7845A400FC4140 /* MainTabView.swift in Sources */,
 				9A795B4A2E80653D00D37CBD /* WeekView.swift in Sources */,
+				9A66AD112EFA6C9500110202 /* CategoryManagementView.swift in Sources */,
 				9A6558E22E787B6000FC4140 /* DateFormatter+Extensions.swift in Sources */,
 				9A6558D42E78590B00FC4140 /* EditTaskView.swift in Sources */,
 			);
@@ -510,12 +526,14 @@
 				9A6558C42E7845C600FC4140 /* CalendarView.swift in Sources */,
 				9A6558E32E787B6000FC4140 /* DateFormatter+Extensions.swift in Sources */,
 				9A6558BB2E7845A400FC4140 /* MainTabView.swift in Sources */,
+				9A66AD192EFA6FCF00110202 /* SettingsView.swift in Sources */,
 				9A6558CA2E7845D000FC4140 /* Task.swift in Sources */,
 				9A795B492E80653D00D37CBD /* WeekView.swift in Sources */,
 				9A6558D52E78590B00FC4140 /* EditTaskView.swift in Sources */,
 				9A6558C12E7845B700FC4140 /* TaskListView.swift in Sources */,
 				9A6558CF2E7858E200FC4140 /* Color+Extensions.swift in Sources */,
 				9A6558CD2E7845D300FC4140 /* Data+Extensions.swift in Sources */,
+				9A66AD122EFA6C9500110202 /* CategoryManagementView.swift in Sources */,
 				9AB7073C2E788413000D8B60 /* EditCategoryView.swift in Sources */,
 				9A6558DD2E78755C00FC4140 /* Calendar+Extensions.swift in Sources */,
 			);
@@ -530,6 +548,7 @@
 				9A795B342E805EA300D37CBD /* DateFormatter+Extensions.swift in Sources */,
 				9A795B3D2E805EC700D37CBD /* TaskRowView.swift in Sources */,
 				9A795B392E805EB900D37CBD /* EditCategoryView.swift in Sources */,
+				9A66AD182EFA6FCF00110202 /* SettingsView.swift in Sources */,
 				9A795B472E80653D00D37CBD /* WeekView.swift in Sources */,
 				9A795B3A2E805EBD00D37CBD /* MainTabView.swift in Sources */,
 				9A795B3F2E805ECD00D37CBD /* CalendarView.swift in Sources */,
@@ -537,6 +556,7 @@
 				9A795B3E2E805ECA00D37CBD /* DailyTaskListView.swift in Sources */,
 				9A795B362E805EAB00D37CBD /* Color+Extensions.swift in Sources */,
 				9A795B3C2E805EC300D37CBD /* TaskListView.swift in Sources */,
+				9A66AD132EFA6C9500110202 /* CategoryManagementView.swift in Sources */,
 				9A795B382E805EB600D37CBD /* Task.swift in Sources */,
 				9A795B372E805EB000D37CBD /* Data+Extensions.swift in Sources */,
 			);

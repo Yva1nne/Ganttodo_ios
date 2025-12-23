@@ -7,6 +7,7 @@ struct TaskListView: View {
     @Query(sort: \Task.plannedDateStart) var tasks: [Task]
     
     @State private var showingAddTask = false
+    @State private var showingSettings = false
     @State private var taskToEdit: Task?
     
     @State private var overdueExpanded = true
@@ -111,12 +112,21 @@ struct TaskListView: View {
             }
             .navigationTitle("任务列表")
             .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button(action: { showingSettings = true }) {
+                        Image(systemName: "gearshape")
+                    }
+                }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: { showingAddTask = true }) { Image(systemName: "plus") }
                 }
             }
             .sheet(isPresented: $showingAddTask) { EditTaskView(task: Task(title: "")) }
+            
             .sheet(item: $taskToEdit) { task in EditTaskView(task: task) }
+            .sheet(isPresented: $showingSettings) {
+                SettingsView()
+            }
         }
     }
     
