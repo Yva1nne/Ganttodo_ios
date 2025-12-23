@@ -11,10 +11,11 @@ struct TaskRowView: View {
 
     var body: some View {
         VStack(alignment: .leading) {
-            HStack(spacing: 12) {
+            HStack(alignment: .center, spacing: 12) {
                 Rectangle()
                     .fill(task.category?.color ?? .gray.opacity(0.5))
                     .frame(width: 4)
+                    .frame(maxHeight: .infinity)
                 
                 Button(action: {
                     withAnimation {
@@ -40,6 +41,13 @@ struct TaskRowView: View {
                         .strikethrough(task.isCompleted, color: .secondary)
                         .foregroundColor(task.isCompleted ? .secondary : .primary)
                     
+                    if let note = task.note, !note.isEmpty {
+                        Text(note)
+                            .font(.system(size: 12)) // 较小字号
+                            .foregroundColor(.secondary) // 灰色
+                            .lineLimit(2) // 限制显示行数，避免列表过长
+                    }
+                    
                     Text(formatDateRange(start: task.plannedDateStart, end: task.plannedDateEnd))
                         .font(.caption)
                         .foregroundColor(.secondary)
@@ -60,6 +68,7 @@ struct TaskRowView: View {
             }
         }
         .padding(.vertical, 4)
+        .fixedSize(horizontal: false, vertical: true)
     }
     
     private func formatDateRange(start: Date, end: Date) -> String {

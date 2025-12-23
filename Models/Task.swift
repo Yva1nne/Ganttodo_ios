@@ -42,6 +42,9 @@ final class Task: Hashable {
     var completionDate: Date?
     
     var category: TaskCategory?
+    var note: String?      // 备注
+    var location: String?  // 地点
+    
     
     @Relationship(deleteRule: .cascade)
     var subtasks: [Task]?
@@ -55,7 +58,9 @@ final class Task: Hashable {
          completionDate: Date? = nil,
          category: TaskCategory? = nil,
          subtasks: [Task]? = [],
-         parentTask: Task? = nil)
+         parentTask: Task? = nil,
+         note: String? = nil,
+         location: String? = nil)
     {
         self.id = UUID()
         self.title = title
@@ -67,6 +72,8 @@ final class Task: Hashable {
         self.category = category
         self.subtasks = subtasks
         self.parentTask = parentTask
+        self.note = note
+        self.location = location
     }
 
     static func == (lhs: Task, rhs: Task) -> Bool {

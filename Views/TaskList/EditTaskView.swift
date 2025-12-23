@@ -18,6 +18,8 @@ struct EditTaskView: View {
     @State private var deadline: Date?
     @State private var category: TaskCategory?
     @State private var hasDeadline: Bool = false
+    @State private var location: String = ""
+    @State private var note: String = ""
     
     @State private var isCreatingCategory = false
     @State private var newCategoryName: String = ""
@@ -35,6 +37,8 @@ struct EditTaskView: View {
         _deadline = State(initialValue: task.deadline)
         _category = State(initialValue: task.category)
         _hasDeadline = State(initialValue: task.deadline != nil)
+        _location = State(initialValue: task.location ?? "")
+        _note = State(initialValue: task.note ?? "")
     }
 
     var body: some View {
@@ -97,10 +101,27 @@ struct EditTaskView: View {
                     }
                     .disabled(category == nil)
                 }
+                Section(header: Text("详细信息")) {
+                    HStack {
+                        Image(systemName: "location")
+                            .foregroundColor(.gray)
+                        TextField("地点", text: $location)
+                    }
+                                    
+                    VStack(alignment: .leading) {
+                        Text("备注")
+                            .font(.caption)
+                            .foregroundColor(.gray)
+                        TextEditor(text: $note)
+                            .frame(height: 80) // 给备注一点高度
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 8)
+                                    .stroke(Color.secondary.opacity(0.2), lineWidth: 1)
+                            )
+                    }
+                    .padding(.vertical, 4)
+                }
                 
-                //
-                // MARK: - Request 1: "Status" section moved and simplified
-                //
                 Section(header: Text("状态")) {
                     Toggle(isOn: $isCompleted.animation()) {
                         Text("已完成")
@@ -165,6 +186,8 @@ struct EditTaskView: View {
         task.plannedDateEnd = Calendar.current.startOfDay(for: plannedDateEnd)
         task.category = category
         task.deadline = hasDeadline ? deadline : nil
+        task.location = location
+        task.note = note
         
         if task.modelContext == nil {
             context.insert(task)
